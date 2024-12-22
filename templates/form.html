@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link href="static/img/favicon.png" rel="icon">
+    <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="static/css/main.css" rel="stylesheet">
+    <title>Transaction Fraud Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #21252977;
+            /* Dark background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            /* White background for the form */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 0px #000;
+            margin-top: 50px; /* Adjusted margin-top */
+            width: 700px; /* Adjusted width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            color: #eb5d1e;
+            text-align: center;
+            margin-bottom: 20px; /* Adjusted margin */
+        }
+
+        label {
+            color: #eb5d1e;
+            font-size: 16px; /* Adjusted font size */
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px; /* Adjusted padding */
+            margin-bottom: 15px; /* Adjusted margin */
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #eb5d1e;
+            color: #fff;
+            padding: 12px 20px; /* Adjusted padding */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d34415;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="/" class="logo d-flex align-items-center me-auto">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="static/img/logo.png" alt=""> -->
+                <h1 class="sitename">Safely</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/" class="">Home</a></li>
+                    <li><a href="/form">Make Prediction</a></li>
+                    <li><a href="/visualizations">Statistics</a></li>
+
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="/form">Predict</a>
+
+        </div>
+    </header>
+    <div class="form-container">
+        <h1>Transaction Fraud Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="type">Type:</label>
+            <input type="text" name="type" id="type" required><br>
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" required><br>
+            <label for="oldbalanceOrg">Old Balance Origin:</label>
+            <input type="number" name="oldbalanceOrg" id="oldbalanceOrg" required><br>
+            <label for="newbalanceOrig">New Balance Origin:</label>
+            <input type="number" name="newbalanceOrig" id="newbalanceOrig" required><br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+
+</html>
